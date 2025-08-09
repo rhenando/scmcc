@@ -1,16 +1,24 @@
 // app/components/Footer.jsx
 
 import Link from "next/link";
+import Image from "next/image"; // ✅ 1. Import the Image component
 
 export default function Footer() {
   return (
-    <footer id='footer' className='bg-brand-dark text-white'>
-      <div className='container mx-auto section-padding pb-8'>
+    <footer id='footer' className='bg-[#004d55] text-white'>
+      <div className='container mx-auto px-6 pt-12 pb-12'>
         <div className='grid md:grid-cols-3 gap-12 text-center md:text-left'>
           {/* About */}
           <div>
-            <h3 className='text-xl font-bold mb-4'>SCMCC</h3>
-            <p className='text-gray-400'>
+            {/* ✅ 2. Replace the h3 tag with the Image component */}
+            <Image
+              src='/logo.svg' // Path to your logo in the /public folder
+              alt='SCMCC Logo'
+              width={100} // Adjust to your logo's actual width
+              height={40} // Adjust to your logo's actual height
+              className='mb-4 mx-auto md:mx-0' // Keep bottom margin & handle alignment
+            />
+            <p className='text-white'>
               Your partner in achieving supply chain excellence through
               innovative, practical, and sustainable solutions.
             </p>
@@ -21,24 +29,24 @@ export default function Footer() {
             <ul className='space-y-2'>
               <li>
                 <Link
-                  href='#overview'
-                  className='text-gray-300 hover:text-brand-gold'
+                  href='#about-us'
+                  className='text-white hover:text-brand-gold'
                 >
-                  About
+                  About Us
                 </Link>
               </li>
               <li>
                 <Link
                   href='#services'
-                  className='text-gray-300 hover:text-brand-gold'
+                  className='text-white hover:text-brand-gold'
                 >
                   Services
                 </Link>
               </li>
               <li>
                 <Link
-                  href='#clients'
-                  className='text-gray-300 hover:text-brand-gold'
+                  href='#who-we-serve'
+                  className='text-white hover:text-brand-gold'
                 >
                   Clients
                 </Link>
@@ -48,7 +56,7 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h3 className='text-xl font-bold mb-4'>Contact Us</h3>
-            <ul className='space-y-2 text-gray-300'>
+            <ul className='space-y-2 text-white'>
               <li>Riyadh, Kingdom of Saudi Arabia</li>
               <li>
                 Email:{" "}
@@ -68,7 +76,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className='mt-12 border-t border-gray-700 pt-6 text-center text-gray-500'>
+        <div className='mt-12 border-t border-white pt-6 text-center text-white'>
           <p>
             &copy; {new Date().getFullYear()} Supply Chain Management Consulting
             Company. All Rights Reserved.

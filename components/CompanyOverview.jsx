@@ -84,7 +84,7 @@ export default function CompanyOverview() {
           {/* CORRECTED: Overlay is now a separate div on top of the image only */}
           <div
             className='absolute inset-0 z-10' // Sits above the image
-            style={{ backgroundColor: "rgba(42, 75, 65, 0.6)" }}
+            style={{ backgroundColor: "rgba(0, 77, 85, 0.7)" }}
           ></div>
 
           {/* This container for the shaped content is now on top of the image and overlay */}
@@ -99,8 +99,7 @@ export default function CompanyOverview() {
             {/* THIS SHAPED ELEMENT IS UNCHANGED, AS REQUESTED */}
             <motion.div
               style={{
-                backgroundImage:
-                  "linear-gradient(to bottom, white, hsl(var(--accent)))",
+                backgroundImage: "linear-gradient(to top, #C5A56D, #EAE0C8)",
                 clipPath: "url(#custom-shape)",
               }}
               variants={shapeVariants}
@@ -123,10 +122,10 @@ export default function CompanyOverview() {
                   variants={rightTextVariants}
                   className='text-left md:text-center'
                 >
-                  <p className='text-7xl md:text-8xl font-bold text-white'>
+                  <p className='text-7xl md:text-8xl font-bold text-[#004d55]'>
                     25%
                   </p>
-                  <p className='text-lg text-gray-200 mt-2'>
+                  <p className='text-lg text-[#004d55] mt-2'>
                     Cost reduction achieved for a leading consumer goods
                     company.
                   </p>

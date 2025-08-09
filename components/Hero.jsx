@@ -47,7 +47,7 @@ export default function Hero() {
       {/* UPDATED: Overlay color changed to the new requested dark green */}
       <div
         className='absolute inset-0 z-10'
-        style={{ backgroundColor: "rgba(42, 75, 65, 0.7)" }}
+        style={{ backgroundColor: "rgba(0, 77, 85, 0.7)" }}
       />
 
       {/* Decorative skewed shapes now use the consistent accent color */}

@@ -4,18 +4,18 @@ import Link from "next/link";
 import Image from "next/image";
 import { Globe, Search, ChevronDown, Menu } from "lucide-react";
 
-// Navigation links for the header
+// UPDATED: Navigation links now better reflect the sections on the HomePage.
 const navLinks = [
+  { name: "About Us", href: "#about-us" },
   { name: "Services", href: "#services" },
-  { name: "Who We Serve", href: "#clients" },
-  { name: "About us", href: "#overview" },
-  // FIXED: Corrected a typo from `name:=` to `name:`
+  { name: "Who We Serve", href: "#who-we-serve" },
   { name: "Our Strengths", href: "#strengths" },
+  { name: "Why Choose Us", href: "#why-choose-us" },
 ];
 
 export default function Header() {
   return (
-    // UPDATED: Header background now matches the DetailedContent component's color.
+    // Header background now matches the DetailedContent component's color.
     <header className='w-full shadow-sm' style={{ background: "#F9F6F2" }}>
       <div className='w-full mx-auto flex items-center justify-between px-6 h-24'>
         {/* Left: Logo */}
@@ -38,7 +38,7 @@ export default function Header() {
               <Link
                 key={link.name}
                 href={link.href}
-                // UPDATED: Text and hover colors now use the consistent color palette.
+                // Text and hover colors now use the consistent color palette.
                 className='font-medium transition-colors'
                 style={{ color: "#4A4A4A" }}
                 onMouseOver={(e) => (e.currentTarget.style.color = "#A98C6A")}
@@ -53,7 +53,7 @@ export default function Header() {
         {/* Right: Controls */}
         <div className='hidden md:flex flex-1 justify-end'>
           <div className='flex flex-row items-center space-x-6'>
-            {/* UPDATED: Using inline styles for consistent colors and hover effects */}
+            {/* Using inline styles for consistent colors and hover effects */}
             <button
               className='flex items-center text-sm transition-colors'
               style={{ color: "#5A5A5A" }}
@@ -78,7 +78,7 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <div className='md:hidden'>
-          {/* UPDATED: Accent color applied to the menu icon */}
+          {/* Accent color applied to the menu icon */}
           <button style={{ color: "#A98C6A" }}>
             <Menu size={24} strokeWidth={2} />
           </button>

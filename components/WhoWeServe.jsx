@@ -17,7 +17,7 @@ const clientLogos = [
   { name: "Al Dammami Hospital", path: "/logos/al-dammami-hospital-logo.png" },
   { name: "T-Force", path: "/logos/tforce-logo.png" },
   { name: "Gasco", path: "/logos/gasco-logo.png" },
-  { name: "Al-Othman", path: "/logos/al-othman-logo.png" },
+  // { name: "Al-Othman", path: "/logos/al-othman-logo.png" },
   // Add more clients as needed
 ];
 
